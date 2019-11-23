@@ -73,9 +73,22 @@ def create_password():
 print(create_password())
 '''
 import os
-check file=True
-while check_file:
-    os.path.exists ('C:\Users\oma\Desktop\diary.txt')
+import datetime
+
+file_path='C:/Users/oma/Desktop/diary.txt'
+
+if not os.path.exists(file_path):
+        print("Onko tämä oikea paikka?", file_path)
+
+with open(file_path,"a") as diary:
+    aihe=input("Mikä on päivän aihe? ")
+    teksti=input("Mikä on päivän teksti? ")
+        #diary.writelines("Moi!")
+    date=datetime.datetime.now()
+    pretty_date=f"{date.day}.{date.month}.{date.year}"
+    diary.writelines(f"Date: {pretty_date} {os.linesep}Topic: {aihe}{os.linesep}")
+    diary.writelines(teksti)
+    diary.writelines(f"{os.linesep}********{os.linesep}")
     
 #Turtle-koodit
 import turtle
