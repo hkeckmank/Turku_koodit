@@ -213,3 +213,35 @@ while True:
   if not "?" in clue:
     print("You're the winner!")
     break
+
+  #Replit Tic-Tac_toe
+Define your functions below:
+'''
+field = ["-", "-","-", "-","-", "-","-", "-","-"]
+
+def draw_field():
+  print(field[:3])
+  print(field[3:6])
+  print(field[6:])
+
+def update_field(index, mark):
+  if mark != "X" and mark != "O":
+    print("Valitse X tai O!")
+  else:
+    field[index]=mark
+
+'''
+The execution of the program goes below:
+'''
+
+playing = True
+
+while playing:
+  draw_field()
+  paikka=int(input("Minne laitetaan nappi? "))
+  merkki=input("Oletko O vai X? ")
+  update_field(paikka, merkki)
+  if not "-" in field:
+    break
+
+  
