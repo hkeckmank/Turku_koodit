@@ -152,3 +152,64 @@ for x in range(360):
     franklin.forward(x)
     franklin.left(59)
     franklin.circle(80)
+    
+    
+    
+#Replit Python Hangman
+Variables and function definitions below:
+'''
+import random
+words = ["tuoli","poyta","matto"]
+correct_word=random.choice(words)
+clue=["?","?","?","?","?"]
+lives=7
+
+'''
+Start executing your code below:
+'''
+while True:
+  print(clue)
+  kirjain=input("Arvaa kirjain? ")
+
+  if kirjain in correct_word:
+    for i in range(len(correct_word)):
+      if correct_word[i]==kirjain:
+        clue[i]=kirjain
+  else:
+    lives=lives-1
+  if lives==0:
+     print("That's that then")
+     break
+  if not "?" in clue:
+    print("You're the winner!")
+    break
+ 
+ #Replit Python Hangman
+ 
+Variables and function definitions below:
+'''
+import random
+words = ["tuoli","poyta","matto"]
+correct_word=random.choice(words)
+clue=["?","?","?","?","?"]
+lives=7
+
+'''
+Start executing your code below:
+'''
+while True:
+  print(clue)
+  kirjain=input("Arvaa kirjain? ")
+
+  if kirjain in correct_word:
+    for i in range(len(correct_word)):
+      if correct_word[i]==kirjain:
+        clue[i]=kirjain
+  else:
+    lives=lives-1
+  if lives==0:
+     print("That's that then")
+     break
+  if not "?" in clue:
+    print("You're the winner!")
+    break
