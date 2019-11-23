@@ -106,7 +106,7 @@ def draw_triangle (width,color):
 draw_triangle (150,"Olive Drab")
 '''
 colors=["red","blue","green","hotpink","black","Olive Drab"]
-
+'''
 for x in range (300):
     x=random.randint(-300,300)
     y=random.randint(-300,300)
@@ -119,3 +119,23 @@ for x in range (300):
     franklin.circle(20)
     franklin.end_fill()
     franklin.speed(0)
+'''
+'''
+def draw_circle(t, sz):
+  for i in range(4):
+    t.forward(sz)
+    t.left(90)
+wn = turtle.Screen()
+wn.bgcolor("lightblue")
+for i in range(1,24):
+  draw_circle(franklin,100)
+  franklin.left(18)
+'''
+
+
+for x in range(360):
+    franklin.pencolor(colors[x % 6])
+    franklin.width(x / 100 + 1)
+    franklin.forward(x)
+    franklin.left(59)
+    franklin.circle(80)
